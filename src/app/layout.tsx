@@ -1,6 +1,7 @@
 // import './globals.css'
 import "@fontsource/zen-kaku-gothic-antique";
-import './index.scss'
+import "@fontsource/noto-sans-jp";
+import '@/app/assets/styles/index.scss'
 // import { Zen_Kaku_Gothic_Antique } from '@next/font/google'
 export default function RootLayout({
   children,
