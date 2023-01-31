@@ -5,7 +5,7 @@ export default function DaughnutChart() {
     const canvas = useRef();
       
       useEffect(() => {
-        const ctx = canvas.current;
+        const ctx:any = canvas.current;
        
     
         let chartStatus = Chart.getChart('daughnutChart');
