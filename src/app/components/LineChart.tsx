@@ -46,43 +46,30 @@ export default function LineChart() {
             ],
           },
        options: {
+        legend: {
+          display: false
+      },
          responsive: true,
-         interaction: {
-           mode: 'index',
-           intersect: false,
-         },
+          
          stacked: false,
-         plugins: {
-           title: {
-             display: false,
-             text: 'Chart.js Line Chart - Multi Axis'
-           }
-         },
+        
          scales: {
-            xAxes: [{
-              gridLines: {
-                display: true,
-                color: "#8FE9D0"
-              },
-              scaleLabel: {
-                display: true,
-                labelString: "Time in Seconds",
-                fontColor: "red"
-              }
-            }],
-            yAxes: [{
-              gridLines: {
-                display: false,
-                color: "black",
-                borderDash: [2, 5],
-              },
-              scaleLabel: {
-                display: true,
-                labelString: "Speed in Miles per Hour",
-                fontColor: "green"
-              }
-            }]
-          }
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+          },
+          y1: {
+            type: 'linear',
+            display: false,
+            position: 'right',
+    
+            // grid line settings
+            grid: {
+              drawOnChartArea: false, // only want the grid lines for one axis to show up
+            },
+          },
+        }
          
        },
        

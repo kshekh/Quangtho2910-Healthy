@@ -16,8 +16,12 @@ const navLinks = [
     path: "javascript:void(0)",
     
   }, 
-];
-const catLinks = [
+  {
+    name: "個人情報の取扱について",
+    path: "javascript:void(0)",
+    
+  }, 
+ 
   {
     name: "特定商取引法に基づく表記",
     path: "javascript:void(0)",
@@ -35,22 +39,15 @@ const catLinks = [
 export default function Footer() {
   return (
 <footer className='bg-dark-500 py-5 sm:py-10'>
-<div className="max-w-screen-lg px-6 mx-auto flex justify-between gap-5 flex-wrap ">
-    <div className='flex gap-3 sm:gap-5 lg:gap-12'>
+<div className="max-w-screen-lg px-6 mx-auto   ">
+    <div className='flex flex-wrap gap-3 sm:gap-5 lg:gap-12'>
     {navLinks.map((link, index) => {
               return (
         <Link href={link.path} key={index} className='text-sm sm:text-base text-white hover:text-primary-500 ease-in-out duration-300'>{link.name}</Link> 
         );
       })}
       </div>
-      <div className='flex gap-5 lg:gap-12'>
-      {catLinks.map((link, index) => {
-              return (
-        <Link href={link.path} key={index} className='text-sm sm:text-base text-white hover:text-primary-500 ease-in-out duration-300'>{link.name}</Link> 
-        );
-      })}
       
-      </div>
     </div>
 
     </footer>
